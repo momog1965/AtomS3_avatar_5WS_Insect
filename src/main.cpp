@@ -266,82 +266,6 @@ void loop()
   }
 #endif
 
-#if 0
-  //5WaySwitch
-  GroveMultiSwitch::ButtonEvent_t* evt;
-  delay(1);
-  evt = mswitch->getEvent();
-  if (!evt) {
-    // dynamic device probe
-    deviceDetect();
-    delay(1000);
-    return;
-  }
-
-  if (!(evt->event & GroveMultiSwitch::BTN_EV_HAS_EVENT)) {
-    #if 0
-    Serial.print("No event, errno = ");
-    Serial.println(mswitch->errno);
-    #endif
-    return;
-  }
-
-  for (int i = 0; i < mswitch->getSwitchCount(); i++) {
-    Serial.print(key_names[i]);
-    Serial.print(": RAW - ");
-    Serial.print((evt->button[i] & GroveMultiSwitch::BTN_EV_RAW_STATUS) ? "HIGH " : "LOW ");
-    if (PID_VAL(mswitch->getDevID()) == PID_5_WAY_TACTILE_SWITCH) {
-      Serial.print((evt->button[i] & GroveMultiSwitch::BTN_EV_RAW_STATUS) ? "RELEASED " : "PRESSED ");
-    } else if (PID_VAL(mswitch->getDevID()) == PID_6_POS_DIP_SWITCH) {
-      Serial.print((evt->button[i] & GroveMultiSwitch::BTN_EV_RAW_STATUS) ? "OFF " : "ON ");
-    }
-    Serial.println("");
-  }
-
-  for (int i = 0; i < mswitch->getSwitchCount(); i++) {
-    if (evt->button[i] & ~GroveMultiSwitch::BTN_EV_RAW_STATUS) {
-      Serial.println("");
-      Serial.print(key_names[i]);
-      Serial.print(": EVENT - ");
-    }
-    if (evt->button[i] & GroveMultiSwitch::BTN_EV_SINGLE_CLICK) {
-      Serial.print("SINGLE-CLICK ");
-    }
-    if (evt->button[i] & GroveMultiSwitch::BTN_EV_DOUBLE_CLICK) {
-      Serial.print("DOUBLE-CLICK ");
-    }
-    if (evt->button[i] & GroveMultiSwitch::BTN_EV_LONG_PRESS) {
-      Serial.print("LONG-PRESS ");
-    }
-    if (evt->button[i] & GroveMultiSwitch::BTN_EV_LEVEL_CHANGED) {
-      Serial.print("LEVEL-CHANGED ");
-    }
-  }
-  Serial.println("");
-
-  return;
-#endif
-
-  // アバターの描画は別のスレッドで行われるので、
-  // loopループの中で毎回描画をする必要はありません。
-  //M5.update();  // ボタン状態初期化
-
-#if 0
-  String printStr = "";
-  static String oldStr = "";
-  printStr += String(",isPressed:") + String(M5.BtnA.isPressed() ? "X" : " ");
-  printStr += String(",isHolding:") + String(M5.BtnA.isHolding() ? "X" : " ");
-  printStr += String(",isReleased:") + String(M5.BtnA.isReleased() ? "X" : " ");
-  printStr += String(",wasPressed:") + String(M5.BtnA.wasPressed() ? "X" : " ");
-  printStr += String(",wasHold:") + String(M5.BtnA.wasHold() ? "X" : " ");
-  printStr += String(",wasReleased:") + String(M5.BtnA.wasReleased() ? "X" : " ");
-  printStr += String(",wasClicked:") + String(M5.BtnA.wasClicked() ? "X" : " ");
-  if (oldStr != printStr) {
-    Serial.println(printStr);
-    oldStr = printStr;
-  }
-#endif
-
     // 本体ボタン処理
   if (M5.BtnA.wasPressed()) {    // ボタンが押されていれば
     face_change(fno);
@@ -349,38 +273,6 @@ void loop()
     if (fno>5) fno=0;
     Serial.println("face change");
   }
-
-#if 0
-  //------------------- IMU test
-  float ax, ay, az, gx, gy, gz, t;
-  float pitch, roll, yaw;
-  if (M5.Imu.isEnabled()) {
-    M5.Imu.getAccel(&ax, &ay, &az);
-    M5.Imu.getGyro(&gx, &gy, &gz);
-    
-    //Serial.printf("axyz %5.1f , %5.1f , %5.1f  ", ax, ay, az);
-    //Serial.printf("gxyz %5.1f , %5.1f , %5.1f\r\n", gx, gy, gz);
-
-    uint8_t new_dr;
-    if (ax < -0.5) new_dr = 3;
-    if (ax > 0.5) new_dr = 1;
-    if (ay < -0.5) new_dr = 2;
-    if (ay > 0.5) new_dr = 0;
-    if (new_dr != display_rotation)
-    {
-      display_rotation = new_dr;
-      M5.Lcd.setRotation(display_rotation);
-      avatar.setScale(0.5f);
-      avatar.setPosition(5, -15);
-      avatar.init();
-      Serial.printf("display_rotation %d\r\n", display_rotation);
-    }
-    //if (ax < -0.5) M5.Lcd.setRotation(3);
-    //if (ax > 0.5) M5.Lcd.setRotation(1);
-    //if (ay < -0.5) M5.Lcd.setRotation(2);
-    //if (ay > 0.5) M5.Lcd.setRotation(0);
-  }
-#endif
 
   delay(100);
 }

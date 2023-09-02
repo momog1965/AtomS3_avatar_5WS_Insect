@@ -8,12 +8,12 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/include",
-                "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/src",
+                "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/AtomS3_avatar_5WS_Insect/include",
+                "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/AtomS3_avatar_5WS_Insect/src",
                 "C:/Users/woshi/.platformio/packages/framework-arduinoespressif32/libraries/FS/src",
-                "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/.pio/libdeps/esp32-s3-devkitc-1/M5Stack-Avatar/src",
-                "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/.pio/libdeps/esp32-s3-devkitc-1/M5Unified/src",
-                "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/.pio/libdeps/esp32-s3-devkitc-1/M5GFX/src",
+                "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/AtomS3_avatar_5WS_Insect/.pio/libdeps/esp32-s3-devkitc-1/M5Stack-Avatar/src",
+                "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/AtomS3_avatar_5WS_Insect/.pio/libdeps/esp32-s3-devkitc-1/M5Unified/src",
+                "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/AtomS3_avatar_5WS_Insect/.pio/libdeps/esp32-s3-devkitc-1/M5GFX/src",
                 "C:/Users/woshi/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                 "C:/Users/woshi/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src",
                 "C:/Users/woshi/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/newlib/platform_include",
@@ -246,12 +246,12 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/include",
-                    "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/src",
+                    "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/AtomS3_avatar_5WS_Insect/include",
+                    "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/AtomS3_avatar_5WS_Insect/src",
                     "C:/Users/woshi/.platformio/packages/framework-arduinoespressif32/libraries/FS/src",
-                    "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/.pio/libdeps/esp32-s3-devkitc-1/M5Stack-Avatar/src",
-                    "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/.pio/libdeps/esp32-s3-devkitc-1/M5Unified/src",
-                    "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/.pio/libdeps/esp32-s3-devkitc-1/M5GFX/src",
+                    "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/AtomS3_avatar_5WS_Insect/.pio/libdeps/esp32-s3-devkitc-1/M5Stack-Avatar/src",
+                    "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/AtomS3_avatar_5WS_Insect/.pio/libdeps/esp32-s3-devkitc-1/M5Unified/src",
+                    "D:/PlatformIO/InsectProject/AtomS3_avatar_5WS_Insect/AtomS3_avatar_5WS_Insect/.pio/libdeps/esp32-s3-devkitc-1/M5GFX/src",
                     "C:/Users/woshi/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                     "C:/Users/woshi/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src",
                     "C:/Users/woshi/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/newlib/platform_include",
@@ -483,7 +483,7 @@
                 ]
             },
             "defines": [
-                "PLATFORMIO=60110",
+                "PLATFORMIO=60111",
                 "ARDUINO_ESP32S3_DEV",
                 "ARDUINO_USB_MODE=1",
                 "ARDUINO_RUNNING_CORE=1",
