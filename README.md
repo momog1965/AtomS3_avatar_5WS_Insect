@@ -4,7 +4,7 @@
 
 # Video
 
-![](https://www.youtube.com/watch?v=dTvC04w1OhE)
+[!['brisk walk Atom-chan'](https://github.com/momog1965/AtomS3_avatar_5WS_Insect/assets/143862923/5f00d02a-8806-4b23-b405-899e64617ebe)](['Youtube動画のURL'](https://www.youtube.com/watch?v=dTvC04w1OhE))
 
 # Reference
 
